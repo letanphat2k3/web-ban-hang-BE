@@ -9,11 +9,11 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3001;
 
-// Sử dụng body-parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-routes(app); // Sử dụng router
+
+routes(app); 
 
 mongoose.connect(`${process.env.MONGO_DB}`)
   .then(() => {
